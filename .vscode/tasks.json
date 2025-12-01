@@ -32,10 +32,10 @@
 		{
 			"label": "Run Current Day",
 			"type": "shell",
-			"command": "${workspaceFolder}/build/bin/${fileBasenameNoExtension}.exe",
+			"command": "${workspaceFolder}/build/bin/Debug/${fileBasenameNoExtension}.exe",
 			"args": [],
 			"options": {
-				"cwd": "${workspaceFolder}/build/bin"
+				"cwd": "${workspaceFolder}/build/bin/Debug"
 			},
 			"group": "test",
 			"problemMatcher": [],

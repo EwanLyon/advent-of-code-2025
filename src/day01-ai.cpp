@@ -1,7 +1,7 @@
 // Advent of Code 2025 - Day 01
 #include "aoc.h"
 
-int parseLockLine(std::string line)
+int parseLockLine(const std::string &line)
 {
     // E.g. L10 or R100
 
@@ -12,10 +12,7 @@ int parseLockLine(std::string line)
         positiveOrNegative = -1;
     }
 
-    // Remove the first character
-    line.erase(0, 1);
-
-    int number = std::stoi(line);
+    int number = std::stoi(line.substr(1));
 
     return positiveOrNegative * number;
 }
@@ -27,6 +24,9 @@ int dialWrapping(int value, int mod)
 
 // std::string fileName = "day01-testing.txt";
 std::string fileName = "day01.txt";
+
+constexpr int DIAL_SIZE = 100;
+constexpr int START_POSITION = 50;
 
 int main()
 {
@@ -48,15 +48,13 @@ int main()
     // Part 1
     long long part1 = 0;
 
-    int dialDivisions = 99 + 1; // +1 for "0"
-
-    int dial = 50;
+    int dial = START_POSITION;
     for (const auto &line : lines)
     {
         int result = parseLockLine(line);
 
         dial += result;
-        dial = dialWrapping(dial, dialDivisions);
+        dial = dialWrapping(dial, DIAL_SIZE);
 
         // std::cout << "Dial: " << dial << " | Input: " << line << " (" << result << ")" << std::endl;
 
@@ -71,47 +69,33 @@ int main()
     // Part 2
     long long part2 = 0;
 
-    dial = 50; // Reset dial
+    dial = START_POSITION; // Reset dial
     // int dialPrevious = 0;
     for (const auto &line : lines)
     {
         int result = parseLockLine(line);
+        int magnitude = std::abs(result);
 
-        // Brute forcing because it's getting late
-        int iterationsRequired = std::abs(result);
-        int sign = result < 0 ? -1 : 1;
-        for (size_t i = 0; i < iterationsRequired; i++)
+        int distanceToZero = 0;
+
+        if (result > 0)
         {
-            dial += sign;
-
-            dial = dialWrapping(dial, dialDivisions);
-
-            if (dial == 0)
-            {
-                part2++;
-            }
+            // Rotating right
+            distanceToZero = DIAL_SIZE - dial;
         }
-        
+        else
+        {
+            // Rotating left
+            distanceToZero = (dial == 0) ? DIAL_SIZE : dial;
+        }
 
-        // part2 += std::floor(std::abs(result) / (double)dialDivisions);
+        if (magnitude >= distanceToZero)
+        {
+            part2 += 1 + (magnitude - distanceToZero) / DIAL_SIZE;
+        }
 
-        // dial += result;
-
-        // if ((dialPrevious <= 0 && dial >= 0) || (dialPrevious >= 0 && dial <= 0))
-        // {
-        //     part2++;
-        // }
-
-        // dial = dialWrapping(dial, dialDivisions);
-
-        // dialPrevious = dial;
-
-        // std::cout << "Dial: " << dial << " | Input: " << line << " (" << result << ")" << std::endl;
-
-        // if (dial == 0)
-        // {
-        //     part2++;
-        // }
+        dial += result;
+        dial = dialWrapping(dial, DIAL_SIZE);
     }
 
     std::cout << "Part 2: " << part2 << std::endl;
