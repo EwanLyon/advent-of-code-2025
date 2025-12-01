@@ -1,0 +1,29 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug Current Day",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/bin/Debug/${fileBasenameNoExtension}.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}/build/bin/Debug",
+			"environment": [],
+			"console": "integratedTerminal",
+			"preLaunchTask": "CMake: Build Current Day"
+		},
+		{
+			"name": "Debug Day 01",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/bin/Debug/Dday01.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}/build/bin/Debug",
+			"environment": [],
+			"console": "integratedTerminal",
+			"preLaunchTask": "CMake: Build All"
+		}
+	]
+}
