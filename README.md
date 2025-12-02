@@ -102,6 +102,8 @@ It pointed out I could pass by reference on the string again. I did try but was 
 
 Overall it didn't have much to say which is positive since that means there weren't glaring issues.
 
+Update: **I COULD'VE USED REGEX FUCK**
+
 ### Day 3
 
 #### Initial Thoughts
