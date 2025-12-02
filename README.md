@@ -75,3 +75,53 @@ It suggested I make constants for the dial size and start position which makes s
 ##### Part 2
 
 Yeah it isn't happy with my brute force approach. It actually suggested a different approach which was to determine the distance to 0 and see if our change is greater than that distance and also of course find how many time we would wrap around regardless (using just an integer division).
+
+### Day 2
+
+#### Initial Thoughts
+
+Damn I thought it was just gonna be a simple less than or greater than lol, always a twist just as I get comfy. Ok so we gotta find repeating subsections of strings. Start with a single character and then go up until we are half way (or 1 under half if an odd number of digits in length).
+
+##### Part 1 Done
+
+This was both longer than I would've taken but also the exact same amount of time I would've taken. Perhaps since I spent a while searching how to make a factor LUT. I am quite happy with how I broke it down into the different functions and things. I could've broken it down more but ah well. I was also introduced to the horror of `long long`. Seriously what the fuck AoC??? But also WTF C++??? We have `int` which I understand the size, but the error I was getting was pretty strange and THEN I changed it all to `long` because yeah bigger number BUT NO, that's the same as `int` because of course it is. Now it just looks dumb with `long long` everywhere. I got the answer first try (as in first try submitted since I had runtime issues). BUT I KINDA FUCKED UP. I was searching for ALL repeated values, not just ones that repeated twice. Went above and beyond.
+
+##### Part 2 Done
+
+We are so back. Took me a second since I actually had code from the Part 1 and I was returning too early if there was only 1 factor. Now writing I should've just returned if the string length was less than 2. Much quicker than Part 1 because I already had it all lmao. Also had a "big" brain idea and used the example in the post as the test case and it actually revealed that bug. Very helpful.
+
+#### AI Review
+
+Fucked up the factor search function lol. It was returning `n` instead of `i`. I think in a real situation I would've copy pasted/ai generated the code to find factors since it is just such common code.
+
+It suggested using `std::string_view` which is a way to just peek the characters rather than create a whole new string. This is simply an instance of not knowing that something like that exists (to be fair it's new in C++17). Would defs help memory allocation.
+
+It pointed out that `size_t` is an unsigned number but I was setting it with a `long long`. However I was already checking if lowerBounds was less than 0... so wasn't gonna be a big deal.
+
+It pointed out I could pass by reference on the string again. I did try but was getting an error, I think it was to do with missing the `const` keyword.
+
+Overall it didn't have much to say which is positive since that means there weren't glaring issues.
+
+### Day 3
+
+#### Initial Thoughts
+
+
+
+##### Part 1 Done
+
+
+
+##### Part 2 Done
+
+
+
+#### AI Review
+
+##### Part 1
+
+
+
+##### Part 2
+
+
