@@ -1,8 +1,8 @@
-// Advent of Code 2025 - Day 00 Template
+// Advent of Code 2025 - Day 00
 #include "aoc.h"
 
-// std::string fileName = "day00-testing.txt";
-std::string fileName = "day00.txt";
+// const std::string fileName = "day00-testing.txt";
+const std::string fileName = "day00.txt";
 
 int main()
 {

@@ -108,6 +108,24 @@ Update: **I COULD'VE USED REGEX FUCK**
 
 #### Initial Thoughts
 
+The elves need to get their act together man.
+
+##### Part 1 Done
+
+Ok, that wasn't so bad. I was thinking of having to iterate through the loop twice but then realised we only have to do it once. With the caveat that if we are at the end we don't want to update anything anymore since this is the last possible number.
+
+##### Part 2 Done
+
+The first day scared me the subsequent days. This one was much nicer. I was going to make everything hard coded to 12 but ehhh, more fun to actually make it variable. The longest part was me trying to optimise the index of when we don't need to check every number anymore. Like if we are at the last 2 numbers and the size we need is 12 then we can just start checking the last 2 numbers. Probably a better way to do it but all good. Had quite a few nested loops which meant I fucked up my i j and k variables a lil bit but all good in the end. Also stuff up my indexing by starting a check halfway through anyway (forgot to return 0).
+
+#### AI Review
+
+Another pass by reference lol. It is upset with me about using `std::pow` for the final calculation on part 2 because that converts it to a double. It is suggesting a much more optimised approach which is to multiply the result by 10 then just adding the digit, sort of building it rather than me placing each number in their spot. It suggested doing a `vector.reserve` when we convert the line to numbers, makes sense. It pointed out an optimisation in the "day03.txt" by just making it const. It got offended when I called the `char - '0'` stupid since that's standard. I understand what it's doing but that doesn't mean it isn't dumb. The whole `++i` vs `i++` when it comes to for loops, GUESS WHAT, THE COMPILER OPTIMISES THAT ANYWAY MWAHAHAHAHAHAHAHA.
+
+### Day 4
+
+#### Initial Thoughts
+
 
 
 ##### Part 1 Done
@@ -126,4 +144,187 @@ Update: **I COULD'VE USED REGEX FUCK**
 
 ##### Part 2
 
+
+### Day 5
+
+#### Initial Thoughts
+
+
+
+##### Part 1 Done
+
+
+
+##### Part 2 Done
+
+
+
+#### AI Review
+
+##### Part 1
+
+
+
+##### Part 2
+
+
+### Day 6
+
+#### Initial Thoughts
+
+
+
+##### Part 1 Done
+
+
+
+##### Part 2 Done
+
+
+
+#### AI Review
+
+##### Part 1
+
+
+
+##### Part 2
+
+
+### Day 7
+
+#### Initial Thoughts
+
+
+
+##### Part 1 Done
+
+
+
+##### Part 2 Done
+
+
+
+#### AI Review
+
+##### Part 1
+
+
+
+##### Part 2
+
+
+### Day 8
+
+#### Initial Thoughts
+
+
+
+##### Part 1 Done
+
+
+
+##### Part 2 Done
+
+
+
+#### AI Review
+
+##### Part 1
+
+
+
+##### Part 2
+
+
+### Day 9
+
+#### Initial Thoughts
+
+
+
+##### Part 1 Done
+
+
+
+##### Part 2 Done
+
+
+
+#### AI Review
+
+##### Part 1
+
+
+
+##### Part 2
+
+
+### Day 10
+
+#### Initial Thoughts
+
+
+
+##### Part 1 Done
+
+
+
+##### Part 2 Done
+
+
+
+#### AI Review
+
+##### Part 1
+
+
+
+##### Part 2
+
+
+### Day 11
+
+#### Initial Thoughts
+
+
+
+##### Part 1 Done
+
+
+
+##### Part 2 Done
+
+
+
+#### AI Review
+
+##### Part 1
+
+
+
+##### Part 2
+
+
+### Day 12
+
+#### Initial Thoughts
+
+
+
+##### Part 1 Done
+
+
+
+##### Part 2 Done
+
+
+
+#### AI Review
+
+##### Part 1
+
+
+
+##### Part 2
 
