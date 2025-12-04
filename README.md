@@ -126,17 +126,19 @@ Another pass by reference lol. It is upset with me about using `std::pow` for th
 
 #### Initial Thoughts
 
-
+I forgor to write.
 
 ##### Part 1 Done
 
-
+Look, I'll be honest. This was bad from me. I spent so much time deal with little typos I had made or getting the order of operations wrong or just putting an + 1 after the wrong value. Just upset with this one tbh.
 
 ##### Part 2 Done
 
-
+Praise the lord. I got this one first try. Just set the text to change the rolls to dots. I was thinking how it was gonna make the part 2 harder, thought we were gonna have to check another set of directions or something.
 
 #### AI Review
+
+<TODO>
 
 ##### Part 1
 
